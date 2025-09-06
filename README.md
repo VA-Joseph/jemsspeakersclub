@@ -10,39 +10,39 @@ This repository contains the official website files for the club.
 
 ## 🚀 Features
 
-- Modern, responsive design optimized for desktop and mobile
-- Sections included:
-  - Hero banner with club logo and motto
-  - About Us (vision, mission, founder members)
-  - Activities (writings, shows, programs)
-  - Key Policies (membership, finance, meetings)
-  - Contact & Socials (Instagram, YouTube, email, phone, office address)
-- Styled with fonts and colors inspired by the club logo
-- Navigation bar with smooth scrolling and sticky positioning
+* Modern, responsive design optimized for desktop and mobile
+* Sections included:
+
+  * Hero banner with club logo and motto
+  * About Us (vision, mission, founder members)
+  * Activities (writings, shows, programs)
+  * Key Policies (membership, finance, meetings)
+  * Contact & Socials (Instagram, YouTube, email, phone, office address)
+* Styled with fonts and colors inspired by the club logo
+* Navigation bar with smooth scrolling, sticky positioning, and subtle hover effects
 
 ---
 
 ## 📂 Project Structure
 
 ```
-
 jemsspeakersclub/
 │
 ├── index.html        # Main webpage
 ├── style.css         # Website styles
-├── JEM's Speakers Club\_Logo.jpg  # Club logo
+├── JEM's Speakers Club_Logo.jpg  # Club logo
 └── README.md         # Project documentation
-
-````
+```
 
 ---
 
 ## 🔧 How to View Locally
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/VA-Joseph/jemsspeakersclub.git
-````
+```
 
 2. Navigate into the folder:
 
@@ -102,7 +102,7 @@ start index.html  # Windows
 * YouTube: [JEM's Speakers Club](https://www.youtube.com/@jemsspeakersclub)
 * Email: [speakersclub@clubmemember.org](mailto:speakersclub@clubmemember.org)
 * Phone: [+255743744471](tel:+255743744471)
-* Head Office: Miembeni Street, Msamala Ward, Songea District, Ruvuma Region, P.O. Box 14, Songea
+* Head Office: Dar es Salaam, Tanzania
 
 ---
 
