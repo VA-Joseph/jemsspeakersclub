@@ -26,7 +26,7 @@
 
   <!-- Hero -->
   <header id="hero">
-    <div class="container">
+    <div class="container fade-in">
       <img src="JEM's Speakers Club_Logo.jpg" alt="Club Logo" class="logo">
       <h1>JEM's Speakers Club</h1>
       <p>"Speak to unfold. Speak to solve. Speak to implement."</p>
@@ -35,7 +35,7 @@
 
   <main class="container">
     <!-- About -->
-    <section id="about" class="section">
+    <section id="about" class="section fade-in">
       <h2>About Us</h2>
       <p>JEM's Speakers Club is a non-governmental organization dedicated to promoting <strong>open speaking</strong> and building a supportive environment for people to find and implement <strong>sustainable solutions</strong> to vital issues in society.</p>
       <h3>Our Vision</h3>
@@ -53,7 +53,7 @@
     </section>
 
     <!-- Activities -->
-    <section id="activities" class="section">
+    <section id="activities" class="section fade-in">
       <h2>Our Activities</h2>
       <p>We engage in a variety of activities to achieve our mission:</p>
       <h3>Writings</h3>
@@ -77,7 +77,7 @@
     </section>
 
     <!-- Policies -->
-    <section id="policies" class="section">
+    <section id="policies" class="section fade-in">
       <h2>Key Policies</h2>
       <h4>Membership and Conduct</h4>
       <p>Membership is open to all who adhere to the constitution's principles and are keen on becoming solution-providers for societal issues.</p>
@@ -88,7 +88,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section">
+    <section id="contact" class="section fade-in">
       <h2>Socials & Contact</h2>
       <div class="social-links">
         <a href="https://www.instagram.com/jemsspeakersclub/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
@@ -108,6 +108,21 @@
       <p>&copy; 2025 JEM's Speakers Club. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <!-- JS: Scroll shadow + fade-in -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+
+      document.querySelectorAll('.fade-in').forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (sectionTop < windowHeight - 100) section.classList.add('visible');
+      });
+    });
+  </script>
 
 </body>
 </html>
