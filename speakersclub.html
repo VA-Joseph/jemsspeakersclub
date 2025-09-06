@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEM's Speakers Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+        /* Colors from your logo:
+           Primary Red: #D32F2F (from the main heart shape)
+           Primary Blue: #1976D2 (from the circular element)
+           Accent Orange: #FF9800 (from the text bar)
+        */
+        :root {
+            --primary-red: #D32F2F;
+            --primary-blue: #1976D2;
+            --accent-orange: #FF9800;
+            --text-dark: #333;
+            --text-light: #f8f8f8;
+            --background-light: #ffffff;
+            --background-grey: #f0f2f5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-grey);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px; /* Slightly adjusted max-width for modern feel */
+            margin: auto;
+            padding: 0 25px;
+        }
+
+        /* Navigation */
+        #navbar {
+            background: var(--primary-blue); /* Using blue for navigation */
+            color: var(--text-light);
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        #navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #navbar h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-orange); /* Club name in orange */
+        }
+
+        #navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        #navbar ul li {
+            margin-left: 30px;
+        }
+
+        #navbar ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        #navbar ul li a:hover {
+            color: var(--accent-orange);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        #hero {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #004c8c 100%); /* Gradient blue */
+            color: var(--text-light);
+            border-bottom: 8px solid var(--primary-red); /* Red accent line */
+            position: relative;
+            overflow: hidden; /* For any potential background elements */
+        }
+        
+        #hero::before { /* Subtle background pattern */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjUiIGZpbGw9IiM0YThhYzIiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSIyMDAiIHI9IjUiIGZpbGw9IiM0YThhYzIiLz48L3N2Zz4=');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+
+        #hero .logo {
+            width: 180px; /* Larger logo */
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            border: 6px solid var(--accent-orange); /* Orange border for highlight */
+            box-shadow: 0 0 20px rgba(0,0,0,0.4); /* More pronounced shadow */
+            object-fit: cover;
+            animation: fadeInScale 1s ease-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        #hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem; /* Larger, more impactful heading */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        #hero p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        .section {
+            background: var(--background-light);
+            padding: 70px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            color: var(--primary-red); /* Section titles in red */
+            border-bottom: 4px solid var(--primary-blue); /* Blue underline */
+            padding-bottom: 12px;
+            margin-bottom: 30px;
+            display: inline-block;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .section h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-blue); /* Subheadings in blue */
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 2rem;
+            border-left: 5px solid var(--accent-orange); /* Orange left border */
+            padding-left: 15px;
+        }
+
+        .section h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-red);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: var(--background-grey);
+            padding: 20px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border-left: 5px solid var(--accent-orange);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li:hover {
+            transform: translateX(5px);
+            background-color: #e3e7ec;
+        }
+        
+        ul li strong {
+            color: var(--primary-blue);
+            font-family: 'Montserrat', sans-serif;
+            margin-right: 8px;
+        }
+
+        /* Socials & Contact */
+        .social-links {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #ccc;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 20px;
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-size: 2rem;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-orange);
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        .social-links a i {
+            margin-right: 8px;
+        }
+        
+        .contact-info p {
+            font-size: 1.15rem;
+            margin-top: 25px;
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Footer */
+        footer {
+            background: var(--primary-blue);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+            font-size: 0.95rem;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+        }
+
+        footer .contact-info strong {
+            color: var(--accent-orange);
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container">
+            <h1>JEM's Speakers Club</h1>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#policies">Policies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="container">
+            <img src="JEM's Speakers Club_Logo.jpg" alt="JEM's Speakers Club Logo" class="logo">
+            <h1>JEM's Speakers Club</h1>
+            <p>"Speak to unfold. Speak to solve. Speak to implement."</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>JEM's Speakers Club is a non-governmental organization dedicated to promoting **open speaking** and building a supportive environment for people to find and implement **sustainable solutions** to vital issues in society.</p>
+            <h3>Our Vision</h3>
+            <p>"To build a community that promotes the unfolding of secrets, problem-solving, and implementation of sustainable solutions to neglected, sensitive, and vital issues in society."</p>
+            <h3>Our Mission</h3>
+            <p>"To use various creative and developmental activities and programs to motivate and educate people as well as build a supportive environment for them to feel free and/or be close enough to speak openly, be intrinsically motivated, and uphold patriotism, whilst supporting the underprivileged in society."</p>
+            <h3>Founder Members</h3>
+            <ul>
+                <li><strong>Executive Director:</strong> Joseph Ernest Mshana</li>
+                <li><strong>General Secretary:</strong> Phenias Patrick Fedrick</li>
+                <li><strong>Treasurer:</strong> Steven John Munisi</li>
+                <li><strong>Member:</strong> Asia Lyakinana Assey</li>
+                <li><strong>Member:</strong> Esther Dominic Lubambe</li>
+            </ul>
+        </section>
+
+        <section id="activities" class="section">
+            <h2>Our Activities</h2>
+            <p>We engage in a variety of activities to achieve our mission:</p>
+            <h3>Writings</h3>
+            <ul>
+                <li><strong>Shairi Fikiri:</strong> Thought-provoking poems on contemporary issues.</li>
+                <li><strong>Projection Poems:</strong> Poems promoting essential social, cultural, and political issues.</li>
+                <li><strong>Inking Heart:</strong> Deep reflection poems that reveal the inside, unknown side of individuals or situations.</li>
+            </ul>
+            <h3>Shows</h3>
+            <ul>
+                <li><strong>TOBox:</strong> Broadcasts featuring honest youth opinions on education, health, arts, culture, and politics.</li>
+                <li><strong>Brief Talks:</strong> A show that inspires and enlightens society on creativity and innovation.</li>
+                <li><strong>Set Talks:</strong> A motivational and inspirational program that stirs contemplation and grit.</li>
+            </ul>
+            <h3>Programs</h3>
+            <ul>
+                <li><strong>Youth-Cry:</strong> A poetic show discussing the mental, psychological, and spiritual traumas within youth.</li>
+                <li><strong>Vijana-Concerns:</strong> A youth-focused forum on SWOT analysis for young people.</li>
+                <li><strong>Speakers Nobel Prize:</strong> Awards for individuals with exceptional qualities and exemplary behaviors.</li>
+            </ul>
+        </section>
+
+        <section id="policies" class="section">
+            <h2>Key Policies</h2>
+            <p>The following are some of the fundamental policies of JEM's Speakers Club, derived from its constitution:</p>
+            <h4>Membership and Conduct</h4>
+            <p>Membership is open to all who adhere to the constitution's principles and are keen on becoming solution-providers for societal issues. All members are expected to uphold the club's code of conduct.</p>
+            <h4>Financial Management</h4>
+            <p>The Club ensures financial accountability through its Treasury. Funds are managed by the Treasurer, overseen by the General Secretary and Executive Director. Sources of funds include donations, sales, and revenue from club activities. The financial year runs from October 1st to September 30th.</p>
+            <h4>Meetings and Amendments</h4>
+            <p>Weekly meetings are held on Wednesdays from 20:00 to 22:00, with schedules communicated by the Executive Director. The constitution can be amended with the approval of at least 70% of the members.</p>
+        </section>
+        
+        <section id="contact" class="section">
+            <h2>Socials & Contact</h2>
+            <p>Connect with us on social media and reach out for inquiries.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/jemsspeakersclub/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.youtube.com/@jemsspeakersclub" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+            <p class="contact-info">
+                <strong>Email for Inquiries:</strong> <a href="mailto:speakersclub@clubmemember.org">speakersclub@clubmemember.org</a><br>
+                <strong>Phone (Founder & Executive Director):</strong> <a href="tel:+255743744471">+255743744471</a><br>
+                <strong>Head Office:</strong> Miembeni Street, Msamala Ward, Songea District, Ruvuma Region, P.O. Box 14, Songea
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 JEM's Speakers Club. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
