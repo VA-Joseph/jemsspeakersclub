@@ -100,7 +100,7 @@ start index.html  # Windows
 
 * Instagram: [@jemsspeakersclub](https://www.instagram.com/jemsspeakersclub/)
 * YouTube: [JEM's Speakers Club](https://www.youtube.com/@jemsspeakersclub)
-* Email: [speakersclub@clubmemember.org](mailto:speakersclub@clubmemember.org)
+* Email: [speakersclub@clubmember.org](mailto:speakersclub@clubmember.org)
 * Phone: [+255743744471](tel:+255743744471)
 * Head Office: Dar es Salaam, Tanzania
 
