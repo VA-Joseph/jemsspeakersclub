@@ -28,13 +28,13 @@ body {
   position: sticky; top: 0; z-index: 1000;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-#navbar .container { display: flex; justify-content: space-between; align-items: center; }
+#navbar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
 #navbar h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   color: var(--accent-orange);
 }
-#navbar ul { list-style: none; display: flex; }
+#navbar ul { list-style: none; display: flex; flex-wrap: wrap; }
 #navbar ul li { margin-left: 25px; }
 #navbar ul li a {
   color: var(--text-light);
@@ -160,4 +160,27 @@ footer {
   padding: 20px;
   margin-top: 30px;
   font-size: 0.9rem;
+}
+
+/* ===================== */
+/* Mobile / Responsive tweaks */
+@media (max-width: 600px) {
+
+  /* Navbar */
+  #navbar .container { flex-direction: column; align-items: center; }
+  #navbar ul { flex-direction: column; align-items: center; margin-top: 10px; }
+  #navbar ul li { margin-left: 0; margin-bottom: 10px; }
+
+  /* Hero */
+  #hero { padding: 60px 15px; }
+  .logo { width: 120px; height: 120px; }
+  #hero h1 { font-size: clamp(1.5rem, 6vw, 3rem); }
+  #hero p { font-size: clamp(0.9rem, 3vw, 1.3rem); }
+
+  /* Sections */
+  .section { padding: 20px; }
+  ul li { padding: 12px; font-size: 0.95rem; }
+
+  /* Social links */
+  .social-links a { margin: 0 10px; font-size: 1.2rem; }
 }
