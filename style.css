@@ -36,12 +36,9 @@ body {
   color: var(--text-light);
   text-decoration: none;
   font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 6px;
-  background: var(--primary-blue);
-  transition: color 0.3s, transform 0.2s, background 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
-#navbar ul li a:hover { color: var(--accent-orange); background: var(--primary-red); transform: scale(1.05); }
+#navbar ul li a:hover { color: var(--accent-orange); transform: scale(1.05); }
 
 /* Hero */
 #hero { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, var(--primary-blue) 0%, #004c8c 100%); color: var(--text-light); border-bottom: 8px solid var(--primary-red); }
@@ -57,29 +54,22 @@ body {
 .section h4 { font-family: 'Montserrat', sans-serif; color: var(--primary-red); margin-top: 20px; margin-bottom: 8px; font-size: 1.3rem; font-weight: 700; }
 .section p { font-size: 1.05rem; margin-bottom: 12px; color: #555; }
 
-/* Lists */
+/* Lists / “Page Buttons” */
 ul { list-style: none; padding: 0; }
-ul li { background: var(--background-grey); padding: 15px; margin-bottom: 10px; border-radius: 8px; border-left: 4px solid var(--accent-orange); display: flex; align-items: center; transition: transform 0.2s, background-color 0.2s; }
+ul li { 
+  background: #e0e4ea; /* slightly darker grey for contrast */
+  color: #222; /* ensure text is dark */
+  padding: 15px; 
+  margin-bottom: 10px; 
+  border-radius: 8px; 
+  border-left: 4px solid var(--accent-orange); 
+  display: flex; 
+  align-items: center; 
+  transition: transform 0.2s, background-color 0.2s; 
+}
 ul li i { margin-right: 10px; color: var(--primary-blue); }
 ul li strong { color: var(--primary-blue); margin-right: 6px; }
-ul li:hover { transform: translateX(5px); background: #e3e7ec; }
-
-/* Buttons */
-.button {
-  display: inline-block;
-  margin: 15px 0;
-  padding: 10px 25px;
-  background: var(--primary-red);
-  color: var(--text-light);
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: background 0.3s, transform 0.2s;
-  opacity: 0;
-  transform: translateY(20px);
-}
-.button:hover { background: var(--accent-orange); transform: scale(1.05); }
-.button.visible { opacity: 1; transform: translateY(0); }
+ul li:hover { transform: translateX(5px); background: #d6dae0; }
 
 /* Socials */
 .social-links { text-align: center; margin-top: 20px; }
@@ -105,5 +95,4 @@ footer { background: var(--primary-blue); color: var(--text-light); text-align: 
   .section { padding: 20px; }
   ul li { padding: 12px; font-size: 0.95rem; }
   .social-links a { margin: 0 10px; font-size: 1.2rem; }
-  .button { padding: 8px 20px; font-size: 0.95rem; }
 }
