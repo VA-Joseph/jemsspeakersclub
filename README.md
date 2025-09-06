@@ -2,47 +2,70 @@
 
 **“Speak to unfold. Speak to solve. Speak to implement.”**
 
-JEM’s Speakers Club is a non-governmental organization dedicated to promoting **open speaking**, supporting **creative expression**, and developing **sustainable solutions** for vital issues in society.
+JEM’s Speakers Club is a non-governmental organization promoting **open speaking**, creative expression, and sustainable solutions to vital societal issues.
 
-This repository contains the club’s official **logo** and **website files**.
+This repository contains the official website files for the club.
 
 ---
 
 ## 🚀 Features
 
-* **Responsive design** optimized for desktop and mobile.
-* **Sections included:**
-
-  * Hero banner with club motto & logo
-  * About Us (vision, mission, founder members)
-  * Activities (writings, shows, and programs)
-  * Key Policies (membership, finance, meetings)
-  * Contact & Socials (Instagram, YouTube, email, phone, office address)
-* **Styled with modern fonts & colors** inspired by the club logo (red, blue, orange).
-* **Navigation bar** with smooth scrolling and sticky positioning.
+- Modern, responsive design optimized for desktop and mobile
+- Sections included:
+  - Hero banner with club logo and motto
+  - About Us (vision, mission, founder members)
+  - Activities (writings, shows, programs)
+  - Key Policies (membership, finance, meetings)
+  - Contact & Socials (Instagram, YouTube, email, phone, office address)
+- Styled with fonts and colors inspired by the club logo
+- Navigation bar with smooth scrolling and sticky positioning
 
 ---
 
 ## 📂 Project Structure
 
 ```
+
 jemsspeakersclub/
 │
-├── speakersclub.html          # Main webpage
-├── JEM's Speakers Club_Logo.jpg  # Official logo
-└── README.md                  # Project documentation
+├── index.html        # Main webpage
+├── style.css         # Website styles
+├── JEM's Speakers Club\_Logo.jpg  # Club logo
+└── README.md         # Project documentation
+
+````
+
+---
+
+## 🔧 How to View Locally
+
+1. Clone the repository:
+```bash
+git clone https://github.com/VA-Joseph/jemsspeakersclub.git
+````
+
+2. Navigate into the folder:
+
+```bash
+cd jemsspeakersclub
+```
+
+3. Open the website in your browser:
+
+```bash
+open index.html   # Mac
+# or
+start index.html  # Windows
 ```
 
 ---
 
-## 🔧 How to Use
+## 🎨 How to Customize
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/<your-username>/jemsspeakersclub.git
-   ```
-2. Open `speakersclub.html` in any web browser.
+* **Styles:** Edit `style.css` to adjust colors, fonts, spacing, or layout.
+* **Logo:** Replace `JEM's Speakers Club_Logo.jpg` with your own image (same filename for consistency).
+* **Content:** Update sections in `index.html` for text, lists, or links.
+* **Socials:** Update URLs in the “Socials & Contact” section.
 
 ---
 
@@ -66,20 +89,20 @@ jemsspeakersclub/
 
 ## 📜 Policies
 
-* **Membership:** Open to solution-oriented individuals.
-* **Finance:** Managed transparently by Treasurer & overseen by leadership.
-* **Meetings:** Weekly on Wednesdays, 20:00–22:00.
-* **Amendments:** Require approval from at least 70% of members.
+* **Membership:** Open to all solution-oriented individuals
+* **Finance:** Managed transparently by Treasurer & overseen by leadership
+* **Meetings:** Weekly on Wednesdays, 20:00–22:00
+* **Amendments:** Require approval from at least 70% of members
 
 ---
 
 ## 📬 Contact & Socials
 
-* 📸 Instagram: [@jemsspeakersclub](https://www.instagram.com/jemsspeakersclub/)
-* ▶️ YouTube: [JEM's Speakers Club](https://www.youtube.com/@jemsspeakersclub)
-* 📧 Email: [speakersclub@clubmemember.org](mailto:speakersclub@clubmemember.org)
-* 📞 Phone: [+255743744471](tel:+255743744471)
-* 🏢 Head Office: Miembeni Street, Msamala Ward, Songea District, Ruvuma Region, P.O. Box 14, Songea
+* Instagram: [@jemsspeakersclub](https://www.instagram.com/jemsspeakersclub/)
+* YouTube: [JEM's Speakers Club](https://www.youtube.com/@jemsspeakersclub)
+* Email: [speakersclub@clubmemember.org](mailto:speakersclub@clubmemember.org)
+* Phone: [+255743744471](tel:+255743744471)
+* Head Office: Miembeni Street, Msamala Ward, Songea District, Ruvuma Region, P.O. Box 14, Songea
 
 ---
 
